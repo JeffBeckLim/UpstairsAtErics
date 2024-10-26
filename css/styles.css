@@ -62,6 +62,12 @@ body{
     color: white;
 }
 
+
+.footer span{
+    margin: 2rem;
+}
+
+
 .header{
 background-color: #0d141b;
 }
