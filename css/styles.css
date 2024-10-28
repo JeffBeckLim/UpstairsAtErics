@@ -21,7 +21,6 @@ body{
 .card{
     background-color: var(--tertiary_color);
     color: aliceblue;
-    margin: 2rem;
     padding: 2rem !important;
     transition: box-shadow 0.5s, scale 0.2s;
 }
@@ -67,9 +66,12 @@ body{
     margin: 2rem;
 }
 
+#footer-socials span{
+    margin-left: 1rem;
+}
 
 .header{
-background-color: #0d141b;
+    background-color: #0d141b;
 }
 .hero{
     height: 40rem;
@@ -92,3 +94,14 @@ background-color: #0d141b;
 .secondary-color{
     color: #ACBEFF;
 }
+
+.side-bar{
+    background-color: rgba(0, 0, 0, 0.841);
+    position: fixed;
+    top:  0;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
+    z-index: 9999; /* A high z-index value to ensure it's on top */
+}
+
