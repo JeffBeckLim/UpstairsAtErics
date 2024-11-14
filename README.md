@@ -4,7 +4,7 @@
 2. run command ```git clone https://github.com/JeffBeckLim/UpstairsAtErics.git ```
 
 
-**To push changes (Upload updates) 
+**To push changes (Upload updates)**
 
 1. Open directory of the code in Command Prompt
 2. run the following:
