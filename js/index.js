@@ -9,3 +9,12 @@ function show_side_bar(){
     console.log(side_bar);
     side_bar.classList.remove("d-none")
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeElements = document.querySelectorAll('.hero-wave');
+    fadeElements.forEach(element => {
+      element.classList.add('show');
+    });
+  });

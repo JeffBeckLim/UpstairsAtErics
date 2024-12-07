@@ -1,6 +1,7 @@
 :root{
     --secondary_color: #ACBEFF;
     --tertiary_color: #112339;
+    --transparent-dark: #0000007d;
 }
 
 .btn{
@@ -17,6 +18,24 @@ body{
     background-color: #0E151C;
     color: aliceblue;
 }
+
+
+.bounce {
+    animation: bounce 3s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-17px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
 
 .card{
     background-color: var(--tertiary_color);
@@ -44,7 +63,12 @@ body{
     font-size: small;
 }
 
-
+.centered-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
 .form-control{
     background-color: rgba(240, 248, 255, 0);
@@ -62,33 +86,60 @@ body{
 }
 
 
-.footer span{
-    margin: 2rem;
+.footer{
+    margin-top: 10rem;
 }
 
-#footer-socials span{
-    margin-left: 1rem;
+/* svg */
+.footer-icon{
+    height: 30px;
 }
 
-.header{
-    background-color: #0d141b;
-}
+#footer-wave{
+    z-index: -99;
+    filter: blur(28px);
+  }
+
+
 .hero{
     height: 40rem;
 }
 
 .hero-wave{
+    filter: blur(20px);
+    overflow: hidden;
     position: absolute;
-    top:  22rem;
+    top:  20rem;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1; /* Optional: Lower z-index to place it behind other elements */
+
+    opacity: 0;
+    transition: all 1s ease-in-out;
 }
+
+.hero-wave.show {
+    top: 9rem;
+  opacity: 1;
+}
+
 
 .hero-text{
     color: white;
     text-shadow: 1px 1px 8px rgb(187, 203, 216);;
+}
+
+#inquire-div{
+    background-color: var(--transparent-dark);
+    padding: 3rem;
+    margin-top: 10rem !important;
+}
+
+#music-div{
+    background-color: var(--transparent-dark);
+    padding: 3rem;
+    margin-top: 6rem;
 }
 
 .secondary-color{
@@ -105,3 +156,15 @@ body{
     z-index: 9999; /* A high z-index value to ensure it's on top */
 }
 
+
+@media (min-width: 992px) {
+    #carouselExample{
+        scale: .9;
+    }
+  }
+
+@media (max-width: 991px) {
+    #carouselExample{
+        scale: 1;
+    }
+}
