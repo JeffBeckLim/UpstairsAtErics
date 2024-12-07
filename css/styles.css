@@ -4,6 +4,7 @@
     --transparent-dark: #0000007d;
 }
 
+
 .btn{
     padding: 15px;
 }
@@ -63,6 +64,7 @@ body{
     font-size: small;
 }
 
+
 .centered-div {
     position: absolute;
     top: 50%;
@@ -115,6 +117,8 @@ body{
     height: 100%;
     z-index: -1; /* Optional: Lower z-index to place it behind other elements */
 
+    
+
     opacity: 0;
     transition: all 1s ease-in-out;
 }
@@ -161,10 +165,31 @@ body{
     #carouselExample{
         scale: .9;
     }
+
+    .carousel-sm{
+        display: none;
+    }
+
+
   }
 
 @media (max-width: 991px) {
-    #carouselExample{
+    .carousel-lg{
         scale: 1;
+        display: none;
     }
+
+    .carousel-sm{
+        display: block;
+    }
+
+    #inquire-div{
+        padding: 1rem;
+     
+    }
+
+    #music-div{
+        padding: 3rem 0rem 3rem 0rem;
+    }
+
 }
