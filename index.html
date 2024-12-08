@@ -47,7 +47,7 @@
                 <span class="ms-3"><a class="text-decoration-none text-light" href="#about-div">About</a></span>
                 <span class="ms-3"><a class="text-decoration-none text-light" href="#shows-div">Shows</a></span>
                 <!-- <span class="ms-3"><a href="">SOCIALS</a></span> -->
-                <span class="ms-3"><a class="text-decoration-none text-light btn-hero btn btn-outline-light" style="border-radius: 0px;" href="#inquire-div">Book a show</a></span>
+                <span class="ms-3"><a class="text-decoration-none text-light btn-hero btn btn-outline-light" style="border-radius: 0px;" href="#inquire-div">INQUIRE</a></span>
             </div>
     
             <div class="col-6 d-lg-none d-flex justify-content-end align-items-center">
@@ -91,9 +91,11 @@
             </div>
             
             <div class="col-12 text-center">
-                <button class="btn-hero btn btn-outline-light rounded-0">
-                    BOOK A SHOW
-                </button>
+                <a href="#inquire-div">
+                    <button class="btn-hero btn btn-outline-light rounded-0">
+                        INQUIRE FOR A SHOW
+                    </button>
+                </a>
             </div>
 
             <div class="col-12 d-flex justify-content-center  -danger align-items-center">
@@ -273,22 +275,56 @@
 
             <div class="col-12">
                 <div class=" d-flex justify-content-center">
-                    <form class="w-100  p-3">
+                    <form method="POST" id="form" class="w-100  p-3">
+                        <input type="hidden" name="access_key" value="6ae8b612-ba04-4433-a795-d3537741dc68">
                         <div class="form-group">
-                            <label for="">Phone Number</label>
-                            <input class="form-control" type="text" name="" id="input-text">
+                            <label for="">Phone Number*</label>
+                            <input name="phone" class="form-control" type="text" required>
                         </div>
         
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <label for="input_email">Email address*</label>
+                          <input name="email" type="email" class="form-control" id="input_email" aria-describedby="emailHelp" required>
                           <small id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</small>
                         </div>
-        
-        
-                       
+
+
+                        <div class="form-group mt-4">
+                            <label for="">Event Type*</label>
+                            <input name="event type" class="form-control" type="text" required>
+                        </div>
+
+
+                        <div class="form-group mt-4">
+                            <label for="">Event Date*</label>
+                            <input name="date" class="form-control" type="date" required>
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="">Event Location*</label>
+                            <input name="location" class="form-control" type="text" required>
+                        </div>
+                        
+                        <div class="form-group mt-4">
+                            <label for="">Estimated Guest Count</label>
+                            <input name="estimated guest count" class="form-control" type="number">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="">Other Notes About the Event</label>
+                            <input name="other notes" class="form-control" type="text">
+                        </div>
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                         <button type="submit" class="btn-hero btn btn-outline-light mt-5 rounded-0">Submit</button>
+
+                        <div id="result"></div>
+                        
                       </form>
+
+                      <script src="js/webforms3.js"></script>
+
+
                 </div>
             </div>
          </div>
