@@ -140,6 +140,10 @@ body{
     margin-top: 10rem !important;
 }
 
+.instagram-media{
+    height: 33rem;
+}
+
 #music-div{
     background-color: var(--transparent-dark);
     padding: 3rem;
