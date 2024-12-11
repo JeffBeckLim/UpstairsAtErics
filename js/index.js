@@ -20,3 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  const albumCovers = document.querySelectorAll('.album-cover-div');
+
+
+  albumCovers.forEach(div => {
+    div.addEventListener('click', () => {
+
+      let description = div.querySelector('.song-description');
+
+      if(description.classList.contains('show')){
+        description.classList.remove('show')
+      }else{
+        description.classList.add('show')
+      }
+      
+    });
+  });
