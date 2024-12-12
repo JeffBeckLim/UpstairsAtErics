@@ -60,7 +60,7 @@ const buttons = [
     button.classList.remove('play')
     button.classList.add('pause')
 
-    playIcon.src = '../assets/pauseButton.svg'
+    playIcon.src = 'songs/pauseButton.svg'
   }
   
   function pause(button, audio, playIcon){
@@ -68,7 +68,7 @@ const buttons = [
     button.classList.remove('pause')
     button.classList.add('play')
 
-    playIcon.src = '../assets/playButton.svg'
+    playIcon.src = 'songs/playButton.svg'
   }
   
   function setProgress(e) {
