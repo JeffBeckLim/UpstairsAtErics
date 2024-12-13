@@ -4,9 +4,9 @@
     --transparent-dark: #0000007d;
 }
 
-body{
+/* body{
     overflow-x: hidden;
-}
+} */
 
 .album-cover-div{
     display: flex;
@@ -252,6 +252,7 @@ body{
   }
 
 @media (max-width: 991px) {
+
     .carousel-lg{
         scale: 1;
         display: none;
@@ -261,7 +262,7 @@ body{
         display: block;
     }
 
-    .hero-wave{
+    .hero-wave svg{
         scale: 1.5;
         top: 3rem !important;
     }
