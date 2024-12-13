@@ -33,20 +33,22 @@ const buttons = [
     let button = document.getElementById(buttons[i]);
     let audio = document.getElementById(audios[i]);
     let playIcon = document.getElementById(playIcons[i]);
-    button.addEventListener('click', ()=>{
-        playOrPause(button,audio, playIcon);
-    })
-  
+
     let progress= document.getElementById(progressBars[i]);
     let progressContainer = document.getElementById(progressContainers[i]);
+  
+    button.addEventListener('click', ()=>{
+        playOrPause(button,audio, playIcon, progressContainer);
+    })
+  
   
     audio.addEventListener('timeupdate', () => updateProgress(audio, progress));
     progressContainer.addEventListener('click', setProgress);
   }
   
-  function playOrPause(button, audio, playIcon){
+  function playOrPause(button, audio, playIcon, progressContainer){
     if(button.classList.contains('play')){
-        play(button, audio, playIcon)
+        play(button, audio, playIcon, progressContainer)
     }
     else if(button.classList.contains('pause')){
         pause(button, audio, playIcon)
@@ -55,8 +57,20 @@ const buttons = [
         location.reload()
     }
   }
-  function play(button, audio, playIcon) {  
-    audio.play()
+  function play(button, audio, playIcon, progressContainer) {  
+
+    let loading = progressContainer.querySelector('.track-loading-text')
+    // let loading = document.getElementById('loading1');
+    loading.classList.remove('d-none');
+
+    audio.play().then(() => {
+      loading.classList.add('d-none');
+    }).catch(() => {
+      console.error('Error loading audio');
+      loading.classList.add('d-none');
+    });
+
+    // audio.play()
     button.classList.remove('play')
     button.classList.add('pause')
 
