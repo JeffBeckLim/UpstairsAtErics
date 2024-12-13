@@ -4,6 +4,7 @@
     --transparent-dark: #0000007d;
 }
 
+
 .album-cover-div{
     display: flex;
     justify-content: center;
@@ -128,18 +129,17 @@ body{
 
 .hero-wave{
     filter: blur(20px);
-    overflow: hidden;
+    overflow: auto;
     position: absolute;
     top:  20rem;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1; /* Optional: Lower z-index to place it behind other elements */
-
-    
-
     opacity: 0;
     transition: all 1s ease-in-out;
+
+    /* max-width: fit-content; */
 }
 
 .hero-wave.show {
@@ -200,7 +200,6 @@ body{
     margin-bottom: 20px;
 }
 
-
 .progressContainer{
     border: solid 1px rgba(255, 255, 255, 0.414);
     cursor: pointer;
@@ -257,6 +256,10 @@ body{
 
     .carousel-sm{
         display: block;
+    }
+
+    .hero-wave{
+        scale: 1.7;
     }
 
     #inquire-div{
