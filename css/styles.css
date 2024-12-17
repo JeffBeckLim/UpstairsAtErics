@@ -253,6 +253,12 @@ body{
 
 @media (max-width: 991px) {
 
+    .hero{
+        height: 27rem;
+    }
+    
+
+
     .carousel-lg{
         scale: 1;
         display: none;
@@ -263,8 +269,8 @@ body{
     }
 
     .hero-wave svg{
-        scale: 1.5;
-        top: 3rem !important;
+        scale: 1.9;
+        /*top: 12rem !important; */
     }
 
     #inquire-div{
