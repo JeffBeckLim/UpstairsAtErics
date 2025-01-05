@@ -101,5 +101,3 @@ const buttons = [
     progress.style.width = `${progressPercent}%`;
   }
   
-  
-  
